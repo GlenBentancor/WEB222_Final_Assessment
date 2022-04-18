@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Glen Bentancor</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./normalize.css" />
+  </head>
+
+  <body>
+    <div id="page-top">
+      <header>
+        <img src="./logo_icon_170795.png" alt="VectorLogoZone_planetLogo" />
+        <!-- logo is from icon-icons.com https://icon-icons.com/icon/logo/170795 -->
+        <h1>Glen Bentancor</h1>
+      </header>
+
+      <div id="nav_bar">
+        <div id="nav_btns">
+          <a class="nav-btnH" href="./honesty.html">Honesty</a>
+          <a class="nav-btnP current" href="./product.html">Product</a>
+          <a class="nav-btnR" href="./reflection.html">Reflection</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="productMain">
+      <div id="sidePanel" class="sidePanel"></div>
+
+      <div id="signup-form">
+        <h3>Supplier Signup</h3>
+
+        <form
+          name="signup"
+          action="https://httpbin.org/post"
+          method="post"
+          onsubmit="return checkForm();"
+        >
+          <label for="ProductID">Product ID:</label><br />
+          <input
+            required
+            type="text"
+            name="ProductID"
+            id="ProductID"
+            pattern="[0-9]{8}"
+          /><br />
+
+          <label for="ProductDesc">Product Description:</label><br />
+          <textarea
+            required
+            name="ProductDesc"
+            id="ProductDesc"
+            minlength="20"
+            rows="4"
+            cols="50"
+          ></textarea
+          ><br />
+
+          <label for="Price">Price:</label><br />
+          <input
+            required
+            type="number"
+            name="Price"
+            id="Price"
+            min="0"
+            max="1000"
+          /><br />
+
+          <label for="Username">Supplier Username:</label><br />
+          <input
+            required
+            type="text"
+            name="Username"
+            id="Username"
+            minlength="6"
+          /><br />
+
+          <a>Status:</a><br />
+          <input
+            type="checkbox"
+            id="Status1"
+            name="Status"
+            value="NewSupplier"
+          />
+          <label for="Status1">New Supplier</label><br />
+          <input
+            type="checkbox"
+            id="Status2"
+            name="Status"
+            value="ContractSigned"
+          />
+          <label for="Status2">Contract Signed</label><br />
+          <input
+            type="checkbox"
+            id="Status3"
+            name="Status"
+            value="QualityTested"
+          />
+          <label for="Status3">Quality Tested</label><br />
+
+          <label for="Email">Email:</label><br />
+          <input required type="email" name="Email" id="Email" /><br />
+
+          <input id="submit" type="submit" value="Submit" />
+          <input
+            id="reset"
+            type="reset"
+            value="Reset"
+            onclick="errorBarClear();"
+          />
+
+          <input
+            type="hidden"
+            name="lastName"
+            id="lastName"
+            value="Bentancor"
+          />
+          <input
+            type="hidden"
+            name="studentId"
+            id="studentId"
+            value="135654200"
+          />
+        </form>
+      </div>
+    </div>
+    <footer>
+      ©2020 - &lt;Glen Bentancor&gt;<br />
+      <a
+        href="https://github.com/GlenBentancor/WEB222_Final_Assessment/tree/main/Final_Assessment"
+        >Final Assessment GitHub Link</a
+      >
+    </footer>
+    <script src="./product.js"></script>
+  </body>
+</html>
